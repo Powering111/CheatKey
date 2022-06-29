@@ -7060,7 +7060,6 @@ MonoBehaviour:
   HP: 4
   bullet_damage: 1
   shootAccuracy: 0.1
-  dieMessage: {fileID: 1179292275}
 --- !u!58 &481355926
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7128,6 +7127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP_bar: {fileID: 1731341530}
+  dieMessage: {fileID: 1179292275}
 --- !u!4 &482787068
 Transform:
   m_ObjectHideFlags: 0

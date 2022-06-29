@@ -11795,9 +11795,8 @@ MonoBehaviour:
   reach: 4
   bullet_speed: 10
   HP: 4
-  bullet_damage: 999
+  bullet_damage: 2
   shootAccuracy: 0.1
-  dieMessage: {fileID: 1179292275}
 --- !u!58 &481355926
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11865,6 +11864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP_bar: {fileID: 1731341530}
+  dieMessage: {fileID: 1179292275}
 --- !u!4 &482787068
 Transform:
   m_ObjectHideFlags: 0
@@ -13538,7 +13538,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uAC8C\uC784 \uC624\uBC84!"
+  m_text: "\uC18C\uD504\uD2B8\uC6E8\uC5B4 \uC624\uBC84!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1f0162bdbeb3e914c8c173fdbb902644, type: 2}
   m_sharedMaterial: {fileID: -1946765911027612219, guid: 1f0162bdbeb3e914c8c173fdbb902644, type: 2}
@@ -16948,6 +16948,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 1, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 15, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -18584,13 +18594,17 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: dfa9abf59a176ce4297e3c0392945138, type: 2}
   - m_RefCount: 310
     m_Data: {fileID: 11400000, guid: b15f4b34d084b3245a4743b5a5b83e0d, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: d5cd9f7a27cbe7c458642ef81086ac82, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 94
     m_Data: {fileID: 21300000, guid: 7effdd75dceabed47821987128521881, type: 3}
   - m_RefCount: 310
     m_Data: {fileID: 21300000, guid: 6d7475f43932b574a831f17d52a46b46, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 51c6f01e8d12b04409b00d9b5cf1bea0, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 404
+  - m_RefCount: 405
     m_Data:
       e00: 1
       e01: 0
@@ -18609,7 +18623,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 404
+  - m_RefCount: 405
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: 6.4174e-41, g: 6.4174e-41, b: 6.4174e-41, a: 6.4174e-41}
@@ -18985,6 +18999,22 @@ CompositeCollider2D:
         Y: -170000000
       - X: 820000000
         Y: -360000000
+    - - X: 16600100
+        Y: 3399959
+      - X: 16600100
+        Y: 6600040
+      - X: 16600041
+        Y: 6600099
+      - X: 13399959
+        Y: 6600099
+      - X: 13399900
+        Y: 6600040
+      - X: 13399900
+        Y: 3399959
+      - X: 13399959
+        Y: 3399900
+      - X: 16600041
+        Y: 3399900
   m_CompositePaths:
     m_Paths:
     - - {x: 82.99997, y: -37}
@@ -19151,6 +19181,10 @@ CompositeCollider2D:
       - {x: 72, y: 6.9999704}
       - {x: 72.00003, y: -17}
       - {x: 82, y: -17.000029}
+    - - {x: 1.6599748, y: 0.33999}
+      - {x: 1.6599748, y: 0.6600099}
+      - {x: 1.33999, y: 0.6599747}
+      - {x: 1.3400252, y: 0.33999}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1777300730
@@ -19508,6 +19542,10 @@ PrefabInstance:
     - target: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6923732364848861192, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
+      propertyPath: move
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6923732364848861192, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
       propertyPath: speed

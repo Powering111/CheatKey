@@ -19,13 +19,13 @@ public class PlayerController : MonoBehaviour
     bool canmove = true;
     private Rigidbody2D rb;
     public float shootAccuracy=0.3f;
-    public GameObject dieMessage;
+
     void Awake()
     {
         if (null == instance)
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            //DontDestroyOnLoad(this.gameObject);
         }
         else
         {
@@ -68,7 +68,6 @@ public class PlayerController : MonoBehaviour
             animator.SetBool(attacking_id, false);
         }
 
-        
     }
     private void FixedUpdate()
     {
@@ -151,9 +150,8 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(Animator.StringToHash("Die"), true);
         gameObject.GetComponent<CircleCollider2D>().enabled = false;
         HP = 0;
-        CameraController.Instance.GetComponent<CameraController>().zoomOut();
-        dieMessage.SetActive(true);
         this.enabled = false;
+        UserInterface.Instance.GetComponent<UserInterface>().gameOver();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -24,6 +24,10 @@ public class Enemy : MonoBehaviour
     private bool attacking = false, alive = true;
     float move_index=1; 
     float attack_index=0;
+
+
+    float rotation = 0, rotationSpeed = 90;
+
     void Awake()
     {
         HP = max_HP;
@@ -39,6 +43,7 @@ public class Enemy : MonoBehaviour
     public void FixedUpdate()
     {
 
+        rotation += Time.deltaTime * rotationSpeed;
         //Start attacking player
         if (!attacking)
         {
@@ -56,11 +61,11 @@ public class Enemy : MonoBehaviour
                     if (hit.transform.CompareTag("player"))
                     {
                         this.lookVector = lookVector;
-                        attacking = true;
+                        startAttacking();
                     }
                 }
             }
-            catch(System.Exception e)
+            catch(System.Exception)
             {
             }
         }
@@ -114,21 +119,19 @@ public class Enemy : MonoBehaviour
             animator.SetBool(destroy_anim_id, true);
             stopAttacking();
             alive = false;
+            this.enabled = false;
+
         }
     }
 
-    public void Attack()
+    private void AttackToPlayer()
     {
-        animator.SetBool(attacking_anim_id, false);
         try
         {
             GameObject player = PlayerController.Instance.gameObject;
             Vector3 lookVector = (player.transform.position - transform.position);
             lookVector.z = 0;
-            
-            Quaternion lookRotation = Quaternion.LookRotation(Vector3.forward, lookVector.normalized);
-            GameObject bu = Instantiate(bullet, (Vector3)transform.position, lookRotation);
-            bu.GetComponent<Bullet>().damage = attackDamage;
+            Shoot(lookVector);
             
         }
         catch(System.Exception)
@@ -136,6 +139,20 @@ public class Enemy : MonoBehaviour
             
         }
 
+    }
+
+    
+    private void AttackAutoRotate()
+    {
+        Vector2 lookVector = new Vector2(Mathf.Cos(Mathf.Deg2Rad*rotation),Mathf.Sin(Mathf.Deg2Rad*rotation));
+        Shoot(lookVector);
+    }
+
+    void Shoot(Vector3 lookVector)
+    {
+            Quaternion lookRotation = Quaternion.LookRotation(Vector3.forward, lookVector.normalized);
+            GameObject bu = Instantiate(bullet, (Vector3)transform.position, lookRotation);
+            bu.GetComponent<Bullet>().damage = attackDamage;
     }
 
     private void Update()
@@ -150,7 +167,8 @@ public class Enemy : MonoBehaviour
             }
         }
     }
-    private void InvokeAttack()
+
+    private void InvokeAttack()  // checks player is in sight then attack
     {
         try
         {
@@ -164,28 +182,37 @@ public class Enemy : MonoBehaviour
                 
                 if (hit.transform.CompareTag("player"))
                 {
-                    //Debug.Log(hit.transform.gameObject.CompareTag("player"));
-                    animator.SetBool(attacking_anim_id, true);
+                    //AttackToPlayer();
+                    AttackAutoRotate();
                 }
                 else
                 {
+                    // player is not detedted
                     stopAttacking();
                 }
             }
             else
             {
+                // player is far
                 stopAttacking();
             }
         }
         catch (System.Exception)
         {
+            //when player is died
             stopAttacking();
         }
     }
 
+    void startAttacking()
+    {
+        attacking = true;
+        animator.SetBool(attacking_anim_id, true);
+    }
     void stopAttacking()
     {
         attacking = false;
         attack_index = 0;
+        animator.SetBool(attacking_anim_id, false);
     }
 }
