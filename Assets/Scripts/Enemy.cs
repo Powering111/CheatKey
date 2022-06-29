@@ -6,21 +6,24 @@ public class Enemy : MonoBehaviour
 {
     public int max_HP;
     public int HP;
-    public int strength = 3;
+    public int attackDamage = 3;
+    public int bodyDamage=1;
     public float attack_interval = 1;
     public float attackRange = 6.0f;
     public float speed = 0.5f;
-    public GameObject bullet;
     public bool move=true;
-    private Animator animator;
-    private int destroy_anim_id, attacking_anim_id;
-    private Coroutine attackCoroutine;
-    private bool attacking = false, alive = true;
-    private Rigidbody2D rb;
-    private int ray_layer_mask;
 
+    public GameObject bullet;
+    private Animator animator;
+    private Rigidbody2D rb;
+
+    private int destroy_anim_id, attacking_anim_id;
+    private int ray_layer_mask;
     private Vector3 lookVector;
+
+    private bool attacking = false, alive = true;
     float move_index=1; 
+    float attack_index=0;
     void Awake()
     {
         HP = max_HP;
@@ -52,8 +55,7 @@ public class Enemy : MonoBehaviour
                     
                     if (hit.transform.CompareTag("player"))
                     {
-                        Debug.Log("coroutine start");
-                        attackCoroutine = StartCoroutine(RepeatAttack(attack_interval));
+                        this.lookVector = lookVector;
                         attacking = true;
                     }
                 }
@@ -68,15 +70,15 @@ public class Enemy : MonoBehaviour
         {
             try
             {
-                rb.MovePosition(rb.position);
+                
                 move_index+=Time.deltaTime;
                 
                 if (move_index >= 1 && move_index<2)
                 {
+                    Debug.Log("Moving");
                     //Move 
-                    rb.MovePosition(rb.position + (Vector2)lookVector.normalized * speed * Time.deltaTime);
-
-                    if (move_index >= 2) move_index = 2;
+                    Vector2 newPos = rb.position + speed * Time.deltaTime * (Vector2)lookVector.normalized;
+                    rb.MovePosition(newPos);
                     
                 }
                 else if (move_index >= 2)
@@ -87,7 +89,7 @@ public class Enemy : MonoBehaviour
                     if (move_index >= 3)
                     {
                         GameObject player = PlayerController.Instance.gameObject;
-                        Vector3 lookVector = (player.transform.position - transform.position);
+                        lookVector = (player.transform.position - transform.position);
                         lookVector.z = 0;
                         move_index = 1;
                     }
@@ -126,7 +128,7 @@ public class Enemy : MonoBehaviour
             
             Quaternion lookRotation = Quaternion.LookRotation(Vector3.forward, lookVector.normalized);
             GameObject bu = Instantiate(bullet, (Vector3)transform.position, lookRotation);
-            bu.GetComponent<Bullet>().damage = strength;
+            bu.GetComponent<Bullet>().damage = attackDamage;
             
         }
         catch(System.Exception)
@@ -135,7 +137,20 @@ public class Enemy : MonoBehaviour
         }
 
     }
-    private void StartAttack()
+
+    private void Update()
+    {
+        if (attacking)
+        {
+            attack_index += Time.deltaTime;
+            if (attack_index >= attack_interval)
+            {
+                attack_index -= attack_interval;
+                InvokeAttack();
+            }
+        }
+    }
+    private void InvokeAttack()
     {
         try
         {
@@ -167,22 +182,10 @@ public class Enemy : MonoBehaviour
             stopAttacking();
         }
     }
-    IEnumerator RepeatAttack(float time)
-    {
-        while (true) {
-            yield return new WaitForSeconds(time);
-            StartAttack();
-        }
-    }
 
     void stopAttacking()
     {
-        if (attackCoroutine != null)
-        {
-            StopCoroutine(attackCoroutine);
-            attackCoroutine = null;
-            attacking = false;
-            Debug.Log("coroutine stop");
-        }
+        attacking = false;
+        attack_index = 0;
     }
 }

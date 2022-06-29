@@ -37,6 +37,7 @@ public class Bullet : MonoBehaviour
     private void destroySelf()
     {
         gameObject.GetComponent<Animator>().SetBool(destroyID, true);
+        gameObject.GetComponent<Collider2D>().enabled = false;
         moving = false;
     }
 }

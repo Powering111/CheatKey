@@ -155,4 +155,12 @@ public class PlayerController : MonoBehaviour
         dieMessage.SetActive(true);
         this.enabled = false;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("enemy"))
+        {
+            this.Damage(collision.GetComponent<Enemy>().bodyDamage);
+        }
+    }
 }
