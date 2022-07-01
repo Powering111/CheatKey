@@ -154,11 +154,5 @@ public class PlayerController : MonoBehaviour
         UserInterface.Instance.GetComponent<UserInterface>().gameOver();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("enemy"))
-        {
-            this.Damage(collision.GetComponent<Enemy>().bodyDamage);
-        }
-    }
+    
 }

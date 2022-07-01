@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6923732364848861197}
   - component: {fileID: 6923732364848861186}
   - component: {fileID: 6923732364848861193}
-  - component: {fileID: 6923732364848861192}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: enemy
@@ -145,23 +144,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6923732364848861192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923732364848861187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18ffbc3e14e362c41910a7a2c59ca501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  max_HP: 1
-  HP: 0
-  strength: 3
-  attack_interval: 1
-  attackRange: 100
-  speed: 3
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
-  move: 1

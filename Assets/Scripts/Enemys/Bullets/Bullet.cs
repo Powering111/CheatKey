@@ -2,25 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public abstract class Bullet : MonoBehaviour
 {
-    public float speed = 1.0f;
-    private int destroyID;
-    private Rigidbody2D rb;
+    static public GameObject prefab;
+
+    protected bool moving = true;
+    protected Rigidbody2D rb;
+
     public int damage = 1;
-    private bool moving = true;
+
+    public Bullet(int damage)
+    {
+        this.damage=damage;
+    }
     void Start()
     {
         moving = true;
-        destroyID = Animator.StringToHash("Destroying");
         rb = gameObject.GetComponent<Rigidbody2D>();
-    }
-    private void FixedUpdate()
-    {
-        if (moving)
-        {
-            transform.position = transform.position + transform.up * speed * Time.deltaTime;
-        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -36,7 +34,7 @@ public class Bullet : MonoBehaviour
     }
     private void destroySelf()
     {
-        gameObject.GetComponent<Animator>().SetBool(destroyID, true);
+        gameObject.GetComponent<Animator>().SetBool(Animator.StringToHash("Destroying"), true);
         gameObject.GetComponent<Collider2D>().enabled = false;
         moving = false;
     }
