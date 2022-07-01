@@ -49,7 +49,7 @@ public class DirectToPlayerPattern : EnemyPattern
 
     public override void initializeBullets()
     {
-        bullets.Add(new NormalBullet(this.damage,this.bullet_speed));
+        bullets.Add(NormalBullet(this.damage,this.bullet_speed));
     }
 
 }

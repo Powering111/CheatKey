@@ -5,10 +5,10 @@ using UnityEngine;
 public class NormalBullet : Bullet
 {
     public float speed = 1.0f;
-    public NormalBullet(int damage, float speed) : base(damage)
+    public NormalBullet(int damage, float speed)
     {
         this.speed = speed;
-
+        this.damage = damage;
     }
     private void FixedUpdate()
     {

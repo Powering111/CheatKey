@@ -137,7 +137,7 @@ abstract public class Enemy : MonoBehaviour
     public static void Shoot(Bullet bullet, Vector2 position, Vector2 lookVector)
     {
         Quaternion lookRotation = Quaternion.LookRotation(Vector3.forward, lookVector.normalized);
-        Instantiate(bullet, (Vector3)position, lookRotation);
+        Instantiate(bullet.gameObject, (Vector3)position, lookRotation);
 
     }
 }
