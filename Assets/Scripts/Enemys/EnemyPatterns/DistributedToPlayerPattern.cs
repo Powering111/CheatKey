@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DirectToPlayerPattern : EnemyPattern
+public class DistributedToPlayerPattern : EnemyPattern
 {
     public float shoot_interval=1f;
     private float shoot_index = 0f;
     public int damage = 1;
     public float bullet_speed = 1.0f;
-    
-    public DirectToPlayerPattern(float shoot_interval, int damage, float bullet_speed)
+    public float shoot_accuracy = 0.1f;
+    public DistributedToPlayerPattern(float shoot_interval, int damage, float bullet_speed, float shoot_accuracy)
     {
         this.shoot_interval = shoot_interval;
         this.damage = damage;
         this.bullet_speed = bullet_speed;
+        this.shoot_accuracy = shoot_accuracy;
         initializeBullets();
     }
 
@@ -35,6 +36,11 @@ public class DirectToPlayerPattern : EnemyPattern
             {
                 GameObject player = PlayerController.Instance.gameObject;
                 Vector2 lookVector = (Vector2)player.transform.position - position;
+                
+                lookVector += new Vector2(
+                    Random.Range(-1.0f, 1.0f) * shoot_accuracy,
+                    Random.Range(-1.0f, 1.0f) * shoot_accuracy
+                    );
                 i.Shoot(position, lookVector);
             }
         }
