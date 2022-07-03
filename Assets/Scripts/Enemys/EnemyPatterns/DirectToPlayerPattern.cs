@@ -31,12 +31,12 @@ public class DirectToPlayerPattern : EnemyPattern
     {
         try
         {
-            foreach (Bullet i in bullets)
+            foreach (TBullet i in bullets)
             {
                 GameObject player = PlayerController.Instance.gameObject;
                 Vector3 lookVector = (Vector2)player.transform.position - position;
                 lookVector.z = 0;
-                Enemy.Shoot(i, position, lookVector);
+                i.Shoot(position, lookVector);
             }
         }
         catch (System.Exception e)
@@ -49,7 +49,7 @@ public class DirectToPlayerPattern : EnemyPattern
 
     public override void initializeBullets()
     {
-        bullets.Add(NormalBullet(this.damage,this.bullet_speed));
+        bullets.Add(new TNormalBullet(this.damage,this.bullet_speed));
     }
 
 }

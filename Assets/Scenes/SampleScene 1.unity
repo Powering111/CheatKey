@@ -142,13 +142,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1001 &23315134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -250,13 +249,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &43496464 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -276,13 +274,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &65701274 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -302,13 +299,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 1
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &88076379 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -328,13 +324,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &138694187
 GameObject:
   m_ObjectHideFlags: 0
@@ -11330,13 +11325,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &230671925 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -11356,13 +11350,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!213 &232311257
 Sprite:
   m_ObjectHideFlags: 0
@@ -11592,13 +11585,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &266687082 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -11618,13 +11610,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &284804844 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -11644,13 +11635,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 5
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 1
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &309475343 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -11670,13 +11660,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &322042984
 GameObject:
   m_ObjectHideFlags: 0
@@ -11818,7 +11807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6923732364848861198, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 6923732364848861198, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
       propertyPath: m_LocalScale.x
@@ -11894,13 +11883,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &419651021 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -11920,13 +11908,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &436254361 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -11946,13 +11933,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 1
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &481355921
 GameObject:
   m_ObjectHideFlags: 0
@@ -12054,7 +12040,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481355921}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.63, y: -0.75, z: 0.36}
+  m_LocalPosition: {x: 53.79, y: -0.49, z: 0.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12081,7 +12067,7 @@ MonoBehaviour:
   reach: 4
   bullet_speed: 10
   HP: 4
-  bullet_damage: 2
+  bullet_damage: 1
   shootAccuracy: 0.1
 --- !u!58 &481355926
 CircleCollider2D:
@@ -12139,13 +12125,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 1
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &482787066
 GameObject:
   m_ObjectHideFlags: 0
@@ -12156,6 +12141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 482787068}
   - component: {fileID: 482787067}
+  - component: {fileID: 482787069}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -12192,6 +12178,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &482787069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482787066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b741e65e4746ed4ea74c76508371d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TNormalBullet_prefab: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -12391,13 +12390,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1001 &539828955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12499,13 +12497,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1001 &565728067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12771,13 +12768,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!114 &688945093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13237,13 +13233,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &942257750 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -13263,13 +13258,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1001 &956934002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13552,13 +13546,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 1
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1001 &1025916003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13900,13 +13893,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1001 &1131634800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14225,13 +14217,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 2.5
   move: 1
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1001 &1245139905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14413,20 +14404,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300019f339a8c4e4aae2db02181286a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_HP: 100
-  HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0
-  attackRange: 10
+  max_HP: 50
+  HP: 20
+  sight: 12
   speed: 0.5
   move: 1
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
-  ways: 6
-  clockwise: 1
-  rotationSpeed: 60
-  AttackDirect: 1
-  AttackDirectInterval: 3
+  shoot_interval: 0.03
+  damage: 1
+  bullet_speed: 1
+  rotationSpeed: 360
+  ways: 1
+  clockwise: 0
 --- !u!1001 &1375107366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14688,13 +14676,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &1575205081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -14714,13 +14701,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &1603851573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -14740,13 +14726,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &1649218478 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -14766,13 +14751,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1001 &1684695676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14972,7 +14956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6923732364848861198, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 6923732364848861198, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
       propertyPath: m_LocalScale.x
@@ -19828,13 +19812,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1001 &1805707789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20099,13 +20082,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &1894336315 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923732364848861187, guid: 430bd2215e892a84d8b80f876abf8b6a, type: 3}
@@ -20125,13 +20107,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1001 &1919372553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20314,13 +20295,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6
 --- !u!1 &2053915185
 GameObject:
   m_ObjectHideFlags: 0
@@ -20567,10 +20547,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_HP: 2
   HP: 0
-  attackDamage: 1
-  bodyDamage: 1
-  attack_interval: 0.4
-  attackRange: 8
+  sight: 6
   speed: 0.5
   move: 0
-  bullet: {fileID: 1412080090165841884, guid: df8de1eb9d370a14fb6eb46aee2aa40a, type: 3}
+  attack_interval: 0.4
+  attackDamage: 1
+  bullet_speed: 6

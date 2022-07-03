@@ -4,8 +4,6 @@ using UnityEngine;
 
 public abstract class Bullet : MonoBehaviour
 {
-    static public GameObject prefab;
-
     protected bool moving = true;
     protected Rigidbody2D rb;
 

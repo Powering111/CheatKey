@@ -19,10 +19,8 @@ abstract public class Enemy : MonoBehaviour
 
     private bool attacking = false, alive = true;
     float move_index=1; 
-    float attack_index=0;
 
     protected List<EnemyPattern> patterns = new List<EnemyPattern>();
-    
 
     void Awake()
     {
@@ -37,23 +35,21 @@ abstract public class Enemy : MonoBehaviour
     }
 
 
-    protected virtual void FixedUpdate()
+    protected void FixedUpdate()
     {
 
-        if (!attacking)
-        {
-            if(util.canSeePlayer(transform.position, this.sight))
-            {
-                startAttacking();
-            }
-            else
-            {
-                stopAttacking();
-            }
         
+        if(!attacking&&util.canSeePlayer(transform.position, this.sight))
+        {
+            startAttacking();
         }
 
-
+        if(attacking && !util.canSeePlayer(transform.position, this.sight))
+        {
+            stopAttacking();
+        }
+        
+        
         //TODO : il ban hwa
         // Move enemy
         if (move && attacking && alive)
@@ -134,10 +130,5 @@ abstract public class Enemy : MonoBehaviour
         animator.SetBool(attacking_anim_id, false);
     }
 
-    public static void Shoot(Bullet bullet, Vector2 position, Vector2 lookVector)
-    {
-        Quaternion lookRotation = Quaternion.LookRotation(Vector3.forward, lookVector.normalized);
-        Instantiate(bullet.gameObject, (Vector3)position, lookRotation);
-
-    }
+    
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class EnemyPattern
 {
-    public List<Bullet> bullets=new List<Bullet>();
+    public List<TBullet> bullets=new List<TBullet>();
     public abstract void update(Vector2 position);
     public abstract void initializeBullets();
 }

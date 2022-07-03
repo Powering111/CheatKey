@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NormalBullet : Bullet
 {
+
+    
     public float speed = 1.0f;
     public NormalBullet(int damage, float speed)
     {
